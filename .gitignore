@@ -1,0 +1,20 @@
+# Arduino IDE build files
+build/
+*.elf
+*.bin
+*.hex
+
+# PlatformIO
+.pio/
+.vscode/.platformio/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Node / Web dashboard dependencies
+node_modules/
+npm-debug.log*
+
+# Gemini / Antigravity internal files
+.gemini/

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32-C3 & OLED Display Project Suite - Interactive Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Sidebar / Top Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <div class="chip-icon">⚡</div>
+        <div>
+          <h1>ESP32-C3 OLED Suite</h1>
+          <span class="subtitle">5 Complete Hardware Projects & Interactive Simulator</span>
+        </div>
+      </div>
+      <div class="badge">MCU: RISC-V 160MHz</div>
+    </header>
+
+    <main class="main-content">
+      <!-- Project Selection Tabs -->
+      <nav class="project-tabs">
+        <button class="tab-btn active" data-project="1">
+          <span class="icon">🌦️</span>
+          <span>1. Weather Clock</span>
+        </button>
+        <button class="tab-btn" data-project="2">
+          <span class="icon">🎵</span>
+          <span>2. BLE Controller</span>
+        </button>
+        <button class="tab-btn" data-project="3">
+          <span class="icon">📈</span>
+          <span>3. Crypto Ticker</span>
+        </button>
+        <button class="tab-btn" data-project="4">
+          <span class="icon">🌡️</span>
+          <span>4. ENV Station</span>
+        </button>
+        <button class="tab-btn" data-project="5">
+          <span class="icon">🦖</span>
+          <span>5. Dino Runner</span>
+        </button>
+      </nav>
+
+      <!-- Main Interactive Workstation -->
+      <div class="workstation-grid">
+        <!-- Left Panel: Virtual Hardware Simulator -->
+        <section class="simulator-card">
+          <div class="card-header">
+            <h2>🖥️ Live OLED Display Simulator (128x64 SSD1306)</h2>
+            <span class="live-dot">● LIVE SIMULATION</span>
+          </div>
+          
+          <div class="oled-frame-wrapper">
+            <div class="oled-frame">
+              <div class="screen-label">OLED 0.96" I2C (128x64) - 0x3C</div>
+              <div class="canvas-container">
+                <canvas id="oledCanvas" width="256" height="128"></canvas>
+              </div>
+              <div class="hardware-pins">
+                <span class="pin gnd">GND</span>
+                <span class="pin vcc">VCC (3.3V)</span>
+                <span class="pin scl">SCL (GPIO 9)</span>
+                <span class="pin sda">SDA (GPIO 8)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Hardware Controls -->
+          <div class="sim-controls" id="simControls">
+            <h3>🎮 Interactive Hardware Inputs</h3>
+            <div class="control-buttons" id="controlButtons">
+              <!-- Dynamic buttons rendered by JS based on project -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Panel: Project Details & Hardware Pinout -->
+        <section class="info-card">
+          <div class="project-details" id="projectDetails">
+            <!-- Dynamic info rendered by JS -->
+          </div>
+        </section>
+      </div>
+
+      <!-- Code & Documentation Section -->
+      <section class="code-section">
+        <div class="card-header">
+          <h2>📄 Arduino Sketch (.ino) Code</h2>
+          <button class="copy-btn" id="copyCodeBtn">📋 Copy Arduino Code</button>
+        </div>
+        <pre class="code-block"><code id="codeViewer">Select a project above to view code...</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>ESP32-C3 & OLED Display Project Suite | Created for Arduino & PlatformIO Developers</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

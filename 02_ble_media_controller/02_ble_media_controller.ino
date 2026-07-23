@@ -19,6 +19,7 @@
 #include <Adafruit_SSD1306.h>
 
 #define USE_NIMBLE
+#include <NimBLEDevice.h>
 #include <BleKeyboard.h>
 
 #define SCREEN_WIDTH  128

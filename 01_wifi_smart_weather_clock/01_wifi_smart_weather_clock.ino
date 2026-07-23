@@ -28,7 +28,7 @@ const char* WIFI_SSID     = "AGI s";
 const char* WIFI_PASSWORD = "11111111";
 
 // OpenWeatherMap Configuration (Get free key at openweathermap.org)
-const String CITY         = "Lagos";
+const String CITY         = "Port Harcourt";
 const String COUNTRY_CODE = "NG";
 const String API_KEY      = "7b50b3c5060bf4e716fbbdfcab0d5aa1";
 

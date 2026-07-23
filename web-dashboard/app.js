@@ -10,7 +10,7 @@ let animationFrameId = null;
 const projectsData = {
   1: {
     title: "1. WiFi Smart Weather & NTP Clock",
-    desc: "Fetches live time from NTP servers (WAT / UTC+1) and current weather for Lagos, Nigeria from OpenWeatherMap API over WiFi, displaying a clean digital clock face and forecast.",
+    desc: "Fetches live time from NTP servers (WAT / UTC+1) and current weather for Port Harcourt, Nigeria from OpenWeatherMap API over WiFi, displaying a clean digital clock face and forecast.",
     pins: [
       { name: "OLED SDA", val: "GPIO 8" },
       { name: "OLED SCL", val: "GPIO 9" },

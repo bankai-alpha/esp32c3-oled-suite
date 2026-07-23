@@ -24,18 +24,18 @@
 #include "time.h"
 
 // --- Configuration Settings ---
-const char* WIFI_SSID     = "YOUR_WIFI_SSID";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+const char* WIFI_SSID     = "AGI s";
+const char* WIFI_PASSWORD = "11111111";
 
 // OpenWeatherMap Configuration (Get free key at openweathermap.org)
-const String CITY         = "Tokyo";
-const String COUNTRY_CODE = "JP";
-const String API_KEY      = "YOUR_OPENWEATHERMAP_API_KEY";
+const String CITY         = "Lagos";
+const String COUNTRY_CODE = "NG";
+const String API_KEY      = "7b50b3c5060bf4e716fbbdfcab0d5aa1";
 
 // NTP Server Settings
 const char* NTP_SERVER_1  = "pool.ntp.org";
 const char* NTP_SERVER_2  = "time.nist.gov";
-const long  GMT_OFFSET_SEC= 3600 * 9; // e.g. UTC+9 for JST (Adjust for your timezone)
+const long  GMT_OFFSET_SEC= 3600 * 1; // UTC+1 for West Africa Time (WAT / Nigeria)
 const int   DAYLIGHT_OFFSET_SEC = 0;
 
 // OLED Config

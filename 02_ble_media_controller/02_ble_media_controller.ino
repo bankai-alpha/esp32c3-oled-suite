@@ -17,6 +17,8 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+
+#define USE_NIMBLE
 #include <BleKeyboard.h>
 
 #define SCREEN_WIDTH  128

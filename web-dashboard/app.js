@@ -148,12 +148,35 @@ function setupTabs() {
 
   document.getElementById('copyCodeBtn').addEventListener('click', () => {
     const code = document.getElementById('codeViewer').innerText;
-    navigator.clipboard.writeText(code).then(() => {
+    const showSuccess = () => {
       const btn = document.getElementById('copyCodeBtn');
       btn.innerText = "✅ Copied!";
       setTimeout(() => btn.innerText = "📋 Copy Arduino Code", 2000);
-    });
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(showSuccess).catch(() => fallbackCopy(code, showSuccess));
+    } else {
+      fallbackCopy(code, showSuccess);
+    }
   });
+}
+
+function fallbackCopy(text, callback) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.left = "-999999px";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+    if (callback) callback();
+  } catch (err) {
+    console.error('Copy fallback failed', err);
+  }
+  document.body.removeChild(textArea);
 }
 
 function loadProject(id) {

@@ -28,7 +28,7 @@ const char* WIFI_SSID     = "AGI s";
 const char* WIFI_PASSWORD = "11111111";
 
 // OpenWeatherMap Configuration (Get free key at openweathermap.org)
-const String CITY         = "Port Harcourt";
+const String CITY         = "Lagos";
 const String COUNTRY_CODE = "NG";
 const String API_KEY      = "7b50b3c5060bf4e716fbbdfcab0d5aa1";
 
@@ -150,7 +150,7 @@ void updateDisplay() {
   
   // WiFi signal indicator
   int rssi = WiFi.RSSI();
-  display.setCursor(85, 0);
+  display.setCursor(80, 0);
   if (WiFi.status() == WL_CONNECTED) {
     display.printf("WiFi:%d", rssi);
   } else {
